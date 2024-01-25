@@ -24,11 +24,12 @@ body{
   box-shadow: 3px 3px -8px 3px #ddd;
 }
 
+/** Changed the position to the'right'instead of being'fixed' max-width: 768px or 1024px**/
 @media only screen and (max-width: 768px) {
   .navigation{
     width: 100px;
     height: 100%;
-    position: fixed;
+    position: right;
     top: 0;
     left: 0;
     z-index: 100;

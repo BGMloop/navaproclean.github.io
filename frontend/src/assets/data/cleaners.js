@@ -15,7 +15,7 @@ export const cleaners = [
   },
   {
     id: "02",
-    name: " Amari Nicole",
+    name: "Amari Nicole",
     specialty: "Cleaning Professional",
     avgRating: 4.8,
     totalRating: 272,
