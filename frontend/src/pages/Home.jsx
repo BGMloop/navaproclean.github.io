@@ -7,13 +7,15 @@ import icon01 from '../assets/images/icon01.png';
 import icon02 from '../assets/images/icon02.png';
 import icon03 from '../assets/images/icon03.png';
 import featureImg from '../assets/images/feature-img.png';
+import faqImg from "../assets/images/faq-img.png";
 import videoIcon from '../assets/images/video-icon.png';
 import avatarIcon from '../assets/images/avatar-icon.png';
 import { Link } from 'react-router-dom';
-import {BsArrowRight, } from 'react-icons/bs'
+import { BsArrowRight, } from 'react-icons/bs'
 import About from "../components/About/About";
 import ServiceList from "../components/Services/ServiceList";
 import CleanerList from "../components/Cleaners/CleanerList";
+import Testimonial from "../components/Testimonial/Testimonial";
 
 
 
@@ -105,7 +107,7 @@ const Home = () => {
                     lg:mt-[55px]">
 
                       <div className="py-[30px] px-5">
-                            <div className="flex iteams-center justify-center">
+                            <div className="flex items-center justify-center">
                                 <img src={icon01} alt="" />
                             </div>
                             
@@ -125,7 +127,7 @@ const Home = () => {
                             </div>
                       </div>
                       <div className="py-[30px] px-5">
-                            <div className="flex iteams-center justify-center">
+                            <div className="flex items-center justify-center">
                                 <img src={icon02} alt="" />
                             </div>
                             
@@ -145,7 +147,7 @@ const Home = () => {
                             </div>
                       </div>
                       <div className="py-[30px] px-5">
-                            <div className="flex iteams-center justify-center">
+                            <div className="flex items-center justify-center">
                                 <img src={icon03} alt="" />
                             </div>
                             
@@ -248,6 +250,7 @@ const Home = () => {
                 </div>
             </section>
             {/* ============ feature section end ============= */}
+
             {/* ============ our great cleaners ============= */}
             <section>
                 <div className="container">
@@ -258,10 +261,45 @@ const Home = () => {
                         </p>
                   </div>
 
-                  <CleanerList/>
+                  <CleanerList />
                 </div>
             </section>
             {/* ============ our great cleaners ============= */}
+
+            {/* ============ faq section  ============= */}
+            <section>
+                <div className="container">
+                  <div className="flex justify-between gap-[50px] lg:gap-0">
+                    <div className="w-1/2 hidden md:block">
+                        <img src={faqImg} alt="" />
+                    </div>
+                    <div className="w-full md:w-1/2">
+                        <h2 className="heading">
+                            Most questions by our beloved clients
+                        </h2>
+
+                        <FaqList />
+                    </div>
+
+                </div>
+              </div>
+            </section>
+            {/* ============ faq section end ============= */}
+
+            {/* ============ testimonial  ============= */}
+            <section>
+                <div className="container">
+                <div className="xl:w-[470px] mx-auto">
+                        <h2 className="heading text-center">What our client say</h2>
+                        <p className="text__para text-center">World-class services for everyone. 
+                        Our cleaners offer unmatched, export cleaning service.
+                        </p>
+                  </div>
+
+                  <Testimonial />
+                </div>
+            </section>
+            {/* ============ testimonial end ============= */}
         </>
     );
 };

@@ -6,7 +6,7 @@ export const cleaners = [
   {
     id: "01",
     name: "Ray Med",
-    specialty: "Cleaning Professional",
+    specialization: "Cleaning Professional",
     avgRating: 4.8,
     totalRating: 272,
     photo: cleanerImg01,
@@ -16,7 +16,7 @@ export const cleaners = [
   {
     id: "02",
     name: "Amari Nicole",
-    specialty: "Cleaning Professional",
+    specialization: "Cleaning Professional",
     avgRating: 4.8,
     totalRating: 272,
     photo: cleanerImg02,
@@ -26,7 +26,7 @@ export const cleaners = [
   {
     id: "03",
     name: "Angel Andrew",
-    specialty: "Cleaning Professional",
+    specialization: "Cleaning Professional",
     avgRating: 4.8,
     totalRating: 272,
     photo: cleanerImg03,

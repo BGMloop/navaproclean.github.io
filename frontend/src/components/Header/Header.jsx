@@ -71,7 +71,7 @@ const Header = () => {
           </div>
 
 
-        {/* ============= nav right ============= Need to fi*/}
+        {/* ============= nav right ============= */}
         <div className="flex items-center gap-4">
             <div className="hidden">
                 <Link to="/">

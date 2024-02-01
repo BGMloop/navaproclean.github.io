@@ -11,6 +11,7 @@ export default {
         safetyOrange: "#FF5F15",
         primaryColor: "#F1E3D3",
         textColor: "#4E545F",
+        headingColor: "#181A1E",
       },
       
       boxShadow: {
