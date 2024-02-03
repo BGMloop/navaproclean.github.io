@@ -38,7 +38,7 @@ const Testimonial = () => {
                         <div><h4 className="text-[18px] leading-[30px] font-semibold text-emeraldGreen">
                            Bwalya Maele
                         </h4>
-                        {/* ============ supposed to be yellowColor  ============= */}
+                        FaqItem
                         <div className="flex items-center gap-[2px]">
                             <HiStar className="text-safetyOrange w-[18px] h-5" />
                             <HiStar className="text-safetyOrange w-[18px] h-5" />

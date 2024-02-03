@@ -11,7 +11,7 @@ import faqImg from "../assets/images/faq-img.png";
 import videoIcon from '../assets/images/video-icon.png';
 import avatarIcon from '../assets/images/avatar-icon.png';
 import { Link } from 'react-router-dom';
-import { BsArrowRight, } from 'react-icons/bs'
+import { BsArrowRight, } from 'react-icons/bs';
 import About from "../components/About/About";
 import ServiceList from "../components/Services/ServiceList";
 import CleanerList from "../components/Cleaners/CleanerList";
@@ -75,7 +75,7 @@ const Home = () => {
                                     </div>
                                 </div>
                             </div>
-                                {/* ============ hero content ============ */}
+                             {/* ============ hero content ============ */}
 
                         <div className="flex gap-[30px] justify-end">
                             <div>
