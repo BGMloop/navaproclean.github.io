@@ -42,4 +42,4 @@ const About = () => {
     )
 }
 
-export default CleanerList
+export default About;
