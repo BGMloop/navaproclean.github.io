@@ -3,8 +3,9 @@ import Services from '../pages/Services'
 import Login from '../pages/Login'
 import Signup from '../pages/Signup'
 import Contact from '../pages/Contact'
-import Cleaners from '../pages/Cleaners/Cleaners'
+import Cleaner from '../pages/Cleaners/Cleaner'
 import CleanerDetails from '../pages/Cleaners/CleanerDetails'
+
 
 import {Routes, Route} from 'react-router-dom'
 

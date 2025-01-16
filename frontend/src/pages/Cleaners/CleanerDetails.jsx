@@ -1,8 +1,11 @@
 import React from "react"
 
-
 function CleanerDetails() {
-    return <div>CleanerDetails</div>;
+    return
+     <div>
+        Contact
+    </div>;
 }
 
 export default CleanerDetails; 
+
