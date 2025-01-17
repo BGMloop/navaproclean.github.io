@@ -1,18 +1,72 @@
 import React from "react";
+import { cleaner01, cleaner02, cleaner03 } from "../../assets/images";
 
-import cleaner01 from '../assets/images/cleaner01.png';
-
-
-export const Cleaner = [
+export const CLEANERS_DATA = [
     {
         id: "01",
-        name: "Maria Angel",
-        specialization: "Cleaning Professional",
-        avgRating: 4.8,
-        totalRating: 272,
+        name: "Deep Clean Service",
+        specialization: "4-5 Hours",
+        avgRating: 4.9,
+        totalRating: 312,
         photo: cleaner01,
         totalClients: 1500,
-        location: "Frisco 75035/75034, Prosper, Collin County 75078 Celina, Allen 75002/75013, Dallas 75225/75205, The Colony 75056, Plano 75093/75025/75024/75094/75023, Richardson Palisades Central, Carrollton 75010/75007/75006, Garland Hills Of Firewheel Greens Greens Estates Firewheel Estates Hills of Firewheel, Addison 75230/75201 UPTOWN/75254, 75182, Sunnyvale, Dallas County, DeSoto Northwest Estates",
-      },
-]
-export default Cleaner; 
+        house: "Starting at $200",
+        description: "Transform your space with our professional deep cleaning service. We tackle tough stains, hard-to-reach areas, and restore your home to pristine condition.",
+        features: [
+            "Deep cleaning of all surfaces",
+            "Window cleaning (interior)",
+            "Baseboard and wall cleaning",
+            "Detailed bathroom sanitization",
+            "Kitchen deep clean including appliances",
+            "Light fixture cleaning",
+            "Cabinet interior cleaning",
+            "Air vent cleaning"
+        ],
+        price: 200
+    },
+    {
+        id: "02",
+        name: "Regular Clean Service",
+        specialization: "2-3 Hours",
+        avgRating: 4.8,
+        totalRating: 280,
+        photo: cleaner02,
+        totalClients: 1200,
+        house: "Starting at $150",
+        description: "Maintain a consistently clean and healthy living environment with our regular cleaning service. Perfect for busy households needing reliable cleaning maintenance.",
+        features: [
+            "Dusting and wiping surfaces",
+            "Vacuum and mop floors",
+            "Bathroom cleaning",
+            "Kitchen cleaning",
+            "Bed making",
+            "Empty trash bins",
+            "General tidying"
+        ],
+        price: 150
+    },
+    {
+        id: "03",
+        name: "Move In/Out Clean",
+        specialization: "5-6 Hours",
+        avgRating: 4.9,
+        totalRating: 195,
+        photo: cleaner03,
+        totalClients: 800,
+        house: "Starting at $300",
+        description: "Comprehensive cleaning service for moving transitions. Ensure your new home is ready for move-in or leave your old space spotless for the next occupants.",
+        features: [
+            "Complete deep cleaning",
+            "Inside cabinet cleaning",
+            "Appliance cleaning",
+            "Window and track cleaning",
+            "Baseboard and wall cleaning",
+            "Light fixture cleaning",
+            "Garage sweeping",
+            "Paint touch-up preparation"
+        ],
+        price: 300
+    }
+];
+
+export default CLEANERS_DATA;

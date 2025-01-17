@@ -1,45 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import aboutImg from "../../assets/images/about.png";
-import aboutCardImg from "../../assets/images/about-card.png";
 
 const About = () => {
     return (
-        <section>
-            <div className="container">
-                <div className="flex justify-between gap-[50px] lg:gap-[130px] xl:gap-0 flex-col lg:flex-row ">
-                    {/* ============ About img ============= */}
-                    <div className="relative w-3/4 lg:w-1/2 xl:w-[770px] z-10 order-2 lg:order-1">
-                        <img src={aboutImg} alt="" /> 
-                        <div className="absolute z-20 bottom-4 w-[200px] md:w-[300px] right-[30%] md:right-[-7%] 
-                        lg:right-[22%] ">
-                            <img src={aboutCardImg} alt="" />
-                        </div>
-                    </div>
-
-                    {/* ============ about content ============= */}
-                    <dir className="w-full lg:w-1/2 xl:w-[670px] order-1 lg:order-2">
-                        <h2 className="heading">Proud to be one of the nations best </h2>
-                        <p className="text__para">For 30 years in a row, U.S. News & World Report has recognized us 
-                            as one of the best best publics hospitals in the Nation and #1 in 
-                            Texas. Lorem ispsum dolor sit amet consectetur, adipisicing elit.
-                            Quas, nemo?
-                        </p>
-
-                        <p className="text__para mt-[30px]">
-                             Our best is something we strive for each day, caring for our
-                             clients-not looking back at what we accomplished but towards what 
-                             we can do tomorrow. Providing the best. Lorem ispsum dolor sit
-                             amet, consectetur adipisicing elit. Aliquid, modi?
-                        </p>
-                          
-                          <Link to="/">
-                            <button className="btn">Learn More </button>
-                          </Link>
-                    </dir>
+        <section className="py-12 bg-white">
+            <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center">
+                <img src={aboutImg} alt="About Us" className="lg:w-1/2 rounded-lg shadow-lg" />
+                <div className="lg:w-1/2 lg:pl-8">
+                    <h2 className="text-3xl font-bold mb-4">About Us</h2>
+                    <p className="text-gray-700 mb-4">
+                        We are dedicated to providing top-notch cleaning services tailored to your needs.
+                    </p>
+                    <Link to="/services">
+                        <button className="btn">Learn More</button>
+                    </Link>
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default About;

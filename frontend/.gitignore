@@ -11,6 +11,27 @@ node_modules
 dist
 dist-ssr
 *.local
+package-lock.json
+package.json
+config.js
+routes/.env
+bookings.json
+contacts.json
+sms.json
+backend/.env
+backend/controllers/models
+backend/public
+backend/routes
+backend/server.js
+backend/views
+backend/package-lock.json
+backend/package.json
+backend/config.js
+backend/routes/.env
+backend/bookings.json
+backend/contacts.json
+backend/sms.json
+
 
 # Editor directories and files
 .vscode/*

@@ -1,64 +1,59 @@
 import React from "react";
-import starIcon from "./../../assets/images/Star.png"; 
-import { Link } from "react-router-dom"; 
-import { BsArrowRight } from "react-icons/bs"; 
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { FaStar, FaUserFriends } from "react-icons/fa";
 
 const CleanerCard = ({ cleaner }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
+    >
+      <div className="relative overflow-hidden">
+        <img 
+          src={cleaner.photo} 
+          alt={cleaner.name}
+          className="w-full h-[280px] object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+        <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+          <div className="flex items-center gap-1.5">
+            <FaStar className="text-yellow-500" />
+            <span className="font-bold">{cleaner.avgRating}</span>
+          </div>
+        </div>
+      </div>
       
-      const {
-          name,
-          avgRating,
-          totalRating,
-          photo,
-          specialization,
-          totalClients, 
-          house,
-        } = cleaner;
-    return (
-        <div className="p-3 lg:p-5">
-        <div>
-            <img src={photo} className="w-full" alt="" />
+      <div className="p-6">
+        <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">
+          {cleaner.name}
+        </h3>
+        
+        <p className="text-slate-600 mb-4 line-clamp-2">
+          {cleaner.description}
+        </p>
+
+        <div className="flex items-center gap-2 mb-6">
+          <FaUserFriends className="text-primary" />
+          <span className="text-slate-600">{cleaner.totalClients}+ satisfied clients</span>
         </div>
-     
-        <h2 className="text-[18px] leading-[30px] lg:text-[26] lg:leading-9 
-        text-emeraldGreen font-[700] mt-3 lg:mt-5">
-            {name}
-            </h2>
-            <div className="mt-2 lg:mt-4 flex items-center justify-between">
 
-                <span className="bg-[#CCF0F3] text-safetyOrange py-1 px-2 lg:py-2 lg:px-6 text-[12px] leading-4 
-                lg:text-[16px] lg:leading-7 font-semibold rounded">
-                    {specialization}
-                </span>
-                
-                <div className="flex items-center gap-[6px]">
-                    <span className="flex items-center gap-[6px] text-[14px] leading-6 lg:text-[16px] lg:leading-7
-                font-semibold text-emeraldGreen"> 
-                <img src={starIcon} alt="" /> {avgRating}
-                </span>
-                <span className="text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-[400] text-Color">
-                    ({totalRating})
-                </span>
-              </div>
-            </div>
-
-                <div className="mt-[18px] lg:mt-5 flex items-center justify-between">
-                    <div>
-                        <h3 className="text-[16px] leading-7 lg:text-[18px] lg:leading-[30px] font-semibold
-                        text-emeraldGreen">
-                        +{totalClients} clients
-                      </h3>
-                      <p className="text-[14px] leading-6 font-[400] text-textColor">
-                        At {house}</p>
-                    </div>
-
-                    <Link to='/cleaners' className="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] 
-                        flex items-center justify-center group hover:bg-primaryColor hover:border-none">
-                        <BsArrowRight className="group-hover:text-white w-6 h-5"/>
-                    </Link>
-             </div>
+        <div className="flex justify-between items-center">
+          <span className="font-bold text-primary text-lg">
+            {cleaner.house}
+          </span>
+          <Link 
+            to={`/cleaners/${cleaner.id}`}
+            className="inline-flex items-center justify-center px-6 py-2.5 bg-primary/90 text-white rounded-full
+              hover:bg-primary shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+          >
+            View Profile
+          </Link>
         </div>
-    );
+      </div>
+    </motion.div>
+  );
 };
 
-export default CleanerCard
+export default CleanerCard;

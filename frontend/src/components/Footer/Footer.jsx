@@ -1,139 +1,41 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
-import {RiLinkedinFill} from "react-icons/ri"
-import {AiFillYoutube, AiFillGithub, AiOutlineInstagram} from "react-icons/ai"
+import { RiLinkedinFill } from "react-icons/ri";
+import { AiFillYoutube, AiFillGithub, AiOutlineInstagram } from "react-icons/ai";
 
 const socialLinks = [
-    {
-        path: "https://www.youtube.com/@NavaProClean-ss7vf",
-        icon: <AiFillYoutube className="group-hover:text-white w-4 h-5" />,
-    },
-    {
-        path: "https://github.com/BGMloop",
-        icon: <AiFillGithub className="group-hover:text-white w-4 h-5" />,
-    },
-    {
-        path: "https://www.instagram.com/navacleaningservice/",
-        icon: <AiOutlineInstagram className="group-hover:text-white w-4 h-5" />,
-    },
-    {
-        path: "https://www.linkedin.com/in/bwalya-gabriel-maele-610980219",
-        icon: <RiLinkedinFill className="group-hover:text-white w-4 h-5" />,
-    },
+    { path: "https://www.youtube.com/@NavaProClean-ss7vf", icon: <AiFillYoutube /> },
+    { path: "https://github.com/BwalyaMaele", icon: <AiFillGithub /> },
+    { path: "https://www.instagram.com/navacleaningservice/", icon: <AiOutlineInstagram /> },
+    { path: "https://www.linkedin.com/in/bwalya-gabriel-maele-610980219", icon: <RiLinkedinFill /> },
 ];
-const quickLinks01 = [
-    {
-        path: "/home",
-        display: "Home",
-    },
-    {
-        path: "/",
-        display: "About Us",
-    },
-    {
-        path: "/services",
-        display: "Services",
-    },
-    {
-        path: "/",
-        display: "Blog",
-    },
-];
-const quickLinks02 = [
-    {
-        path: "/find-a-cleaner",
-        display: "Find a Cleaner",
-    },
-    {
-        path: "/",
-        display: "Request an Appointment",
-    },
-    {
-        path: "/",
-        display: "Find a Location",
-    },
-    {
-        path: "/",
-        display: "Get a Opinion",
-    },
-];
-const quickLinks03 = [
-    {
-        path: "/",
-        display: "Donate",
-    },
-    {
-        path: "/contact",
-        display: "Contact Us",
-    },
-];
+
 const Footer = () => {
-    const year = new Data().getFullYear()
-    return <footer className="pb-16 pt-10">
-        <div className="container">
-            <div className="flex justify-between flex-col md:flex-row flex-wrap gap-[30px]">
-                <div>
-                    <img src={logo} alt="" />
-                   <p className="text-[16px] leading-7 font-[400] text-textColor mt-4"> 
-                     Copyright © {year} developed by Bwalya Maele all right reserved
-                    </p> 
-                    
-                    <div className="flex items-center gap-3 mt-4">
-                        {socialLinks.map((link, index)=> 
-                        <Link to={link.path} key={index} className="w-9 h-9 border border-solid border-[#181A1E]
-                        rounded-full flex items-center justify-center group hover:bg-primaryColor hover:border-none ">
-                            {link.icon}
-                            </Link>
-                            )}
+    const year = new Date().getFullYear();
+    
+    return (
+        <footer className="bg-gray-800 text-white py-10">
+            <div className="container mx-auto px-4">
+                <div className="flex flex-col md:flex-row justify-between">
+                    <div className="mb-6">
+                        <img src={logo} alt="Nava Pro Clean logo" className="h-16" />
+                        <p className="mt-4">Copyright © {year} developed by BGMloop. All rights reserved.</p>
+                    </div>
+                    <div className="flex flex-col">
+                        <h2 className="text-lg font-bold mb-2">Follow Us</h2>
+                        <div className="flex space-x-4">
+                            {socialLinks.map((link, index) => (
+                                <a href={link.path} key={index} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+                                    {link.icon}
+                                </a>
+                            ))}
+                        </div>
                     </div>
                 </div>
-
-                <div>
-                    <h2 className="text-[20px] leading-[30px] font-[70] md=6 text-emeraldGreen">
-                        Quick Links
-                    </h2>
-
-                    <ul>
-                        {quickLinks01.map((item,index)=> (
-                        <li key={index} className="mb-4">
-                            <Link to={item.path} className="text-[16px] leading-7 font-[400] text-textColor">{item.display}</Link>
-                         </li> 
-                        ))}
-                    </ul>
-                </div>
-
-                <div>
-                    <h2 className="text-[20px] leading-[30px] font-[70] md=6 text-emeraldGreen">
-                        I want to:
-                    </h2>
-
-                    <ul>
-                        {quickLinks02.map((item,index)=> (
-                        <li key={index} className="mb-4">
-                            <Link to={item.path} className="text-[16px] leading-7 font-[400] text-textColor">{item.display}</Link>
-                         </li> 
-                        ))}
-                    </ul>
-                </div>
-
-                <div>
-                    <h2 className="text-[20px] leading-[30px] font-[70] md=6 text-emeraldGreen">
-                        Support
-                    </h2>
-
-                    <ul>
-                        {quickLinks03.map((item,index)=> (
-                        <li key={index} className="mb-4">
-                            <Link to={item.path} className="text-[16px] leading-7 font-[400] text-textColor">{item.display}</Link>
-                         </li> 
-                        ))}
-                    </ul>
-                </div>
             </div>
-        </div>
-    </footer>
-}
+        </footer>
+    );
+};
 
 export default Footer; 
